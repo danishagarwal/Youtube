@@ -1,8 +1,18 @@
 import React from 'react'
 import { icons } from 'react-icons';
 import { AiTwotoneHome } from "react-icons/ai"
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+
+    //Subscribe to specific part of store
+    const isMenuOpenCheck = useSelector(store => store.sidebar.isMenuOpen);
+
+    //Early return 
+    if (!isMenuOpenCheck) {
+        return null;
+    }
+
     return (
         <div className='p-5 shadow-lg w-48'>
 
