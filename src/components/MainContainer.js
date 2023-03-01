@@ -4,11 +4,11 @@ import VideoContainer from './VideoContainer'
 
 const MainContainer = () => {
     return (
-        <div>
+        <div className=''>
             <ButtonsList />
             <VideoContainer />
         </div>
     )
 }
 
-export default MainContainer
+export default MainContainer;
