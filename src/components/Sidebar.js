@@ -1,5 +1,12 @@
 import React from 'react'
 import { AiTwotoneHome } from "react-icons/ai"
+import { SiYoutubegaming } from "react-icons/si"
+import { MdOutlineLocalMovies, MdOutlineSportsVolleyball } from "react-icons/md"
+import { ImMusic } from "react-icons/im"
+import { GiUnderwearShorts } from "react-icons/gi"
+// import { SiYoutubegaming } from "react-icons/si"
+// import { SiYoutubegaming } from "react-icons/si"
+// import { SiYoutubegaming } from "react-icons/si"
 import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
@@ -13,29 +20,29 @@ const Sidebar = () => {
     }
 
     return (
-        <div className='p-5 shadow-lg w-3/4'>
+        <div className=' p-5 shadow-lg'>
 
-            <ul>
+            <ul className='w-32'>
                 <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Home</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Shorts</li>
+                <li className='flex pr-2 p-1'><GiUnderwearShorts className='pr-2 text-2xl' />Shorts</li>
                 <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Live</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Sports</li>
             </ul>
-
-            <h1 className='font-bold pt-5'>Subscriptions</h1>
+            <br />
+            <hr />
             <ul>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Music</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Movies</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Gaming</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Sports</li>
+                <li className='flex pt-5  pr-2 p-1'><ImMusic className='pr-2 text-2xl' />Music</li>
+                <li className='flex pr-2 p-1'><MdOutlineLocalMovies className='pr-2 text-2xl' />Movies</li>
+                <li className='flex pr-2 p-1'><SiYoutubegaming className='pr-2 text-2xl' />Gaming</li>
+                <li className='flex pr-2 p-1'><MdOutlineSportsVolleyball className='pr-2 text-2xl' />Sports</li>
             </ul>
-
-            <h1 className='font-bold pt-5'>Watch Later</h1>
+            <br />
+            <hr />
+            <h1 className='font-bold pt-5'>Explore</h1>
             <ul>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Music</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Movies</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Gaming</li>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Sports</li>
+                <li className='flex pt-2 pr-2 p-1'><ImMusic className='pr-2 text-2xl' />Music</li>
+                <li className='flex pr-2 p-1'><MdOutlineLocalMovies className='pr-2 text-2xl' />Movies</li>
+                <li className='flex pr-2 p-1'><SiYoutubegaming className='pr-2 text-2xl' />Gaming</li>
+                <li className='flex pr-2 p-1'><MdOutlineSportsVolleyball className='pr-2 text-2xl' />Sports</li>
             </ul>
 
         </div>
