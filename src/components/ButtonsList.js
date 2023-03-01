@@ -5,8 +5,9 @@ const list = ["All", "Gaming", "Live", "TV", "Movies", "Development", "Cricket",
 
 const ButtonsList = () => {
     return (
-        <div className='flex'>
-            {list.map((buttonn) => <Button name={buttonn}></Button>)}
+        <div className='flex '>
+            {/* Showing all buttons  */}
+            {list.map((buttonn, index) => <Button key={index} name={buttonn}></Button>)}
         </div>
 
     )

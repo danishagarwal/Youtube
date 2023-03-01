@@ -1,5 +1,4 @@
 import React from 'react'
-import { icons } from 'react-icons';
 import { AiTwotoneHome } from "react-icons/ai"
 import { useSelector } from 'react-redux';
 
@@ -14,7 +13,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className='p-5 shadow-lg w-48'>
+        <div className='p-5 shadow-lg w-3/4'>
 
             <ul>
                 <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Home</li>
