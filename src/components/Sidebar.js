@@ -8,6 +8,7 @@ import { GiUnderwearShorts } from "react-icons/gi"
 // import { SiYoutubegaming } from "react-icons/si"
 // import { SiYoutubegaming } from "react-icons/si"
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
 
@@ -16,14 +17,40 @@ const Sidebar = () => {
 
     //Early return 
     if (!isMenuOpenCheck) {
-        return null;
+        return (
+            <div className='p-5 shadow-lg'>
+
+                <ul className=''>
+                    <Link to="/"><AiTwotoneHome className='pr-2 text-2xl' /></Link>
+                    <GiUnderwearShorts className='pr-2 text-2xl' />
+                    <AiTwotoneHome className='pr-2 text-2xl' />
+                </ul>
+                <br />
+                <hr />
+                <ul>
+                    <ImMusic className='pr-2 text-2xl' />
+                    <MdOutlineLocalMovies className='pr-2 text-2xl' />
+                    <SiYoutubegaming className='pr-2 text-2xl' />
+                    <MdOutlineSportsVolleyball className='pr-2 text-2xl' />
+                </ul>
+                <br />
+                <hr />
+                <ul>
+                    <ImMusic className='pr-2 text-2xl' />
+                    <MdOutlineLocalMovies className='pr-2 text-2xl' />
+                    <SiYoutubegaming className='pr-2 text-2xl' />
+                    <MdOutlineSportsVolleyball className='pr-2 text-2xl' />
+                </ul>
+
+            </div>
+        );
     }
 
     return (
         <div className=' p-5 shadow-lg'>
 
             <ul className='w-32'>
-                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Home</li>
+                <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' /><Link to="/">Home</Link></li>
                 <li className='flex pr-2 p-1'><GiUnderwearShorts className='pr-2 text-2xl' />Shorts</li>
                 <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' />Live</li>
             </ul>
