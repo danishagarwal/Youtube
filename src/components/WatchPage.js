@@ -15,6 +15,8 @@ const WatchPage = () => {
     useEffect(() => {
         dispatch(closeMenu());
     }, [])
+
+
     return (
         <div className='px-5'>
             <iframe

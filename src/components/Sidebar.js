@@ -47,7 +47,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className=' p-5 shadow-lg'>
+        <div className='p-5 shadow-lg'>
 
             <ul className='w-32'>
                 <li className='flex pr-2 p-1'><AiTwotoneHome className='pr-2 text-2xl' /><Link to="/">Home</Link></li>
