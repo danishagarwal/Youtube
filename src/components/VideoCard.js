@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { getViews } from '../utils/constants';
 const VideoCard = ({ info }) => {
     // console.log(info);
     //Extract values from info
@@ -12,7 +12,7 @@ const VideoCard = ({ info }) => {
             <ul>
                 <li className='font-bold py-2'>{title}</li>
                 <li>{channelTitle}</li>
-                <li>{statistics.viewCount} views</li>
+                <li>{getViews(statistics.viewCount)} views</li>
             </ul>
         </div>
     )
