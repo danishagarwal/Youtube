@@ -10,7 +10,8 @@ const Head = () => {
     const [searchQuery, setSearchQuery] = useState("");
     //for suggestions 
     const [suggestions, setSuggestions] = useState([]);
-
+    //for focus and blurr
+    const [showSuggestions, setShowSuggestions] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -64,19 +65,23 @@ const Head = () => {
                 <div>
                     <input className="p-1 px-5 rounded-l-full w-1/2 border border-gray-400" type="text"
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)} />
+                        onChange={(e) => setSearchQuery(e.target.value)} 
+                        onFocus = {()=> setShowSuggestions(true)} 
+                        onBlur = {()=> setShowSuggestions(false)}
+                        />
                     <button className="rounded-r-full border border-gray-400 px-5 bg-gray-100  p-1">🔍 </button>
                 </div>
 
-                <div className='fixed bg-white py-2 px-5 w-1/5 shadow-lg rounded-lg border border-gray-100'>
+                {showSuggestions && 
+                (<div className='fixed bg-white py-2 px-5 w-1/5 shadow-lg rounded-lg border border-gray-100'>
                     <ul>
                         {suggestions.map((s) => (
 
-                            <li className='py-2 shadow-md hover:bg-gray-200'>🔍 {s}</li>
+                            <li key= {s} className='py-2 hover:bg-gray-200'> {s}</li>
                         ))}
 
                     </ul>
-                </div>
+                </div>)}
             </div>
 
             {/* UserIcon */}
