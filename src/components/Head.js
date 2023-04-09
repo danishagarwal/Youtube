@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/sideBarSlice";
-import { Link } from "react-router-dom";
+
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResult } from "../utils/searchSlice";
 const Head = () => {
@@ -24,10 +24,17 @@ const Head = () => {
   useEffect(() => {
     //Make an API call after every key press ybut if the diff btw 2 key press is <200ms - decline the call
 
+    /**
+     * searchCache = {
+     * iphone = ['iphone 11, iphone 11 pro, iphone 12, iphone 31]
+     * }
+     */
+
     const timer = setTimeout(() => {
       if (searchCache[searchQuery]) {
         setSuggestions(searchCache[searchQuery]);
       } else {
+        //Make an API call and update in cache
         getSearchSuggestions();
       }
     }, 200);

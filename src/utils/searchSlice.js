@@ -1,5 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// our state will store initially empty values
+// Then it will have
+// {
+//   i,
+//   ip,
+//   ipho,
+//   iphpne,
+// }
+
 const searchSlice = createSlice({
   name: "search",
   initialState: {},
