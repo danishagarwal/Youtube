@@ -84,6 +84,7 @@ const Head = () => {
       <div className="col-span-10 px-10">
         <div>
           <input
+            placeholder="Search"
             className="p-1 px-5 rounded-l-full w-1/2 border border-gray-400"
             type="text"
             value={searchQuery}
@@ -114,7 +115,7 @@ const Head = () => {
       <div className="col-span-1">
         <img
           className="h-10"
-          src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+          src="https://seeklogo.com/images/D/deadpool-logo-56C1774C8E-seeklogo.com.png"
           alt="user-icon"
         />
       </div>

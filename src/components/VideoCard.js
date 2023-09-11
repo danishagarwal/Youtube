@@ -19,7 +19,7 @@ const VideoCard = ({ info }) => {
   console.log(truncatedString);
 
   return (
-    <div className="p-2 m-2 w-72 h-80 shadow-lg">
+    <div className="p-2 m-2 w-72 h-80">
       <img src={thumbnails.medium.url} alt="thumbnail" className="rounded-lg" />
       <ul>
         <li className="font-bold py-2">{truncatedString}</li>
