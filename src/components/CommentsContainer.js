@@ -1,5 +1,5 @@
 import React from "react";
-
+import { AvatarGenerator } from "random-avatar-generator";
 // Dummy comments Data
 const commentsData = [
   {
@@ -50,6 +50,7 @@ const commentsData = [
 
 // Single Comment
 const Comment = ({ data }) => {
+  const generator = new AvatarGenerator();
   //Extracting data
   const { name, text } = data;
   return (
@@ -58,7 +59,7 @@ const Comment = ({ data }) => {
         <img
           className="w-10 h-10 "
           alt="user"
-          src="https://cdn-icons-png.flaticon.com/512/552/552721.png"
+          src={generator.generateRandomAvatar()}
         ></img>
 
         <div className="px-3">
