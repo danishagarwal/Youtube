@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import ChatMessage from "./ChatMessage";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../utils/chatSlice";
+import { generateRandomName } from "../utils/helper";
+import { makeRandomMessage } from "../utils/helper";
 
 const LiveChat = () => {
+  var randomSentence = require("random-sentence");
   const dispatch = useDispatch();
 
   //Subscribe to Store
@@ -15,8 +18,8 @@ const LiveChat = () => {
       console.log("Api Polling");
       dispatch(
         addMessage({
-          name: "Danny Agarwal",
-          message: "LoreN IpSum DollAr",
+          name: generateRandomName(),
+          message: randomSentence({ words: 5 }),
         })
       );
     }, 2000);
@@ -26,13 +29,9 @@ const LiveChat = () => {
 
   return (
     <>
-      <div className="w-96 border border-black p-1 mr-2 h-[600px] bg-slate-100 overflow-auto">
+      <div className="flex flex-col-reverse w-96 border border-black p-1 mr-2 h-[600px] bg-slate-100 overflow-auto">
         {chatMsg.map((c, index) => (
-          <ChatMessage
-            name={c.name}
-            key={index}
-            message={c.message + " " + index}
-          />
+          <ChatMessage name={c.name} key={index} message={c.message + " "} />
         ))}
       </div>
     </>

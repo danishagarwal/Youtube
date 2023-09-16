@@ -5,7 +5,8 @@ const chatSlice = createSlice({
   initialState: { messages: [] },
   reducers: {
     addMessage: (state, action) => {
-      state.messages.push(action.payload);
+      //unshift - to push from first in array
+      state.messages.unshift(action.payload);
     },
   },
 });
