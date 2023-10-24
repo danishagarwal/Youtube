@@ -16,7 +16,7 @@ const VideoCard = ({ info }) => {
   const maxLength = 50;
 
   const truncatedString = truncateString(title, maxLength);
-  console.log(truncatedString);
+  // console.log(truncatedString);
 
   return (
     <div className="p-2 m-2 w-72 h-80">
