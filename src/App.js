@@ -9,21 +9,20 @@ import WatchPage from "./components/WatchPage";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/Youtube",
     element: <Body />,
     //Wherever outlet there children will go
     children: [
       {
-        path: "/",
-        element: <MainContainer />
+        path: "/Youtube",
+        element: <MainContainer />,
       },
-
       {
-        path: "watch",
-        element: <WatchPage />
-      }
-    ]
-  }
+        path: "/Youtube/watch",
+        element: <WatchPage />,
+      },
+    ],
+  },
 ]);
 
 function App() {
@@ -39,10 +38,9 @@ function App() {
 
 export default App;
 
-
 /**
- * App Layout - 
- * 
+ * App Layout -
+ *
  * Head
  * Body
  *  SideBar
@@ -51,5 +49,5 @@ export default App;
  *    ButtonsList
  *    Video Container
  *      Video view Page
- * 
+ *
  */
